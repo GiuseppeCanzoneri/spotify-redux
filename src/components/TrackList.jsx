@@ -65,11 +65,10 @@ const TrackList = props => {
               {getTrackList?.tracks?.data?.map((el, i) => {
                 return (
                   <div className="d-flex justify-content-between" key={i}>
-                    <p className="text-white mt-3">
-                      <AiOutlineHeart className="AiOutlineHeart fs-3" />
-                      {el.title}
-                    </p>
+                    <p className="text-white mt-3">{el.title}</p>
                     <p className="text-white">
+                      {" "}
+                      <AiOutlineHeart className="AiOutlineHeart fs-4 text-success" />
                       {Math.floor(parseInt(el.duration) / 60)}:
                       {parseInt(el.duration) % 60 < 10
                         ? "0" + (parseInt(el.duration) % 60)
